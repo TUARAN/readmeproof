@@ -5,7 +5,7 @@
 `readmeproof` finds shell snippets in Markdown, syntax-checks every block, and only executes blocks that explicitly opt in. Documentation examples become tests without turning every README paste into arbitrary code execution.
 
 ```text
-$ npx readmeproof README.md
+$ npx github:TUARAN/readmeproof README.md
 
   readmeproof  README.md
   ────────────────────────────────────────────────────────
@@ -29,8 +29,8 @@ npm test
 Then run:
 
 ```bash
-npx readmeproof README.md         # syntax only; executes nothing
-npx readmeproof README.md --run   # runs opted-in blocks only
+npx github:TUARAN/readmeproof README.md         # syntax only; executes nothing
+npx github:TUARAN/readmeproof README.md --run   # runs opted-in blocks only
 ```
 
 Execution uses Bash strict mode, the README's directory as cwd, and a two-minute timeout per block. Requires Node.js 20+. Zero dependencies.
