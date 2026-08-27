@@ -3,6 +3,14 @@ import fs from 'node:fs';
 import { checkFile, runBlocks } from './core.js';
 
 const args = process.argv.slice(2);
+if (args.includes('--help') || args.includes('-h')) {
+  console.log('Usage: readmeproof [README.md] [--run]\n\nSyntax-check shell blocks; execute only blocks explicitly marked readmeproof.');
+  process.exit(0);
+}
+if (args.includes('--version') || args.includes('-v')) {
+  console.log('0.1.0');
+  process.exit(0);
+}
 const file = args.find(arg => !arg.startsWith('-')) || 'README.md';
 if (!fs.existsSync(file)) {
   console.error(`readmeproof: ${file} not found`);
