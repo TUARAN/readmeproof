@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question or execution-policy idea
+    url: https://github.com/TUARAN/readmeproof/discussions
+    about: Discuss policy changes before proposing broader command execution.

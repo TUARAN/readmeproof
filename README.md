@@ -35,6 +35,10 @@ npx github:TUARAN/readmeproof README.md --run   # runs opted-in blocks only
 
 Execution uses Bash strict mode, the README's directory as cwd, and a two-minute timeout per block. Requires Node.js 20+. Zero dependencies.
 
+## How it evolves
+
+Found a Markdown fence that is parsed incorrectly? Submit a harmless **Markdown fence mismatch** issue. Each accepted example becomes a regression fixture, runs weekly across supported Node versions, and feeds a human-reviewed release PR. See [MAINTENANCE.md](MAINTENANCE.md).
+
 ## 中文
 
 `readmeproof` 会检查 README 中 shell 代码块的语法；只有标记为 `bash readmeproof` 的代码块才允许在 `--run` 时执行。这样安装命令和快速开始示例可以进入 CI，同时默认保持安全的只读检查。

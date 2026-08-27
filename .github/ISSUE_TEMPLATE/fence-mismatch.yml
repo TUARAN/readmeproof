@@ -1,0 +1,30 @@
+name: Markdown fence mismatch
+description: Share a minimal README shell block that readmeproof parses incorrectly.
+title: "[fixture] "
+labels: [fixture, needs-triage]
+body:
+  - type: textarea
+    id: markdown
+    attributes:
+      label: Minimal Markdown
+      description: Use harmless commands such as printf; never include credentials or destructive commands.
+      render: markdown
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations: { required: true }
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual output
+      render: text
+    validations: { required: true }
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: The example is non-destructive and contains no secrets or private paths.
+          required: true
