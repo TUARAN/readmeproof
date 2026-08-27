@@ -1,0 +1,1 @@
+{"name":"readmeproof","version":"0.1.0","description":"Syntax-check and opt-in test the shell commands in your README.","type":"module","bin":{"readmeproof":"src/cli.js"},"scripts":{"test":"node --test"},"engines":{"node":">=20"},"license":"MIT","keywords":["readme","documentation","doctest","cli","ci"]}
